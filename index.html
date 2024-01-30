@@ -42,9 +42,9 @@
       transform: rotate(-55deg);
       border-radius: 70px;
     }
-video{
-      src: url("PORTRAIT.mp4");
-    }    
+.video-container2{
+display: block;    
+}
 } 
 
 @media only screen and (min-width: 768px) {
@@ -81,9 +81,10 @@ video{
       transform: rotate(-55deg);
       border-radius: 70px;
     }
-    video{
-    src: url("Test2.mp4");
-    }
+    .video-container1{
+display: block;    
+}
+
 }
     
 #canna:hover {
@@ -130,7 +131,8 @@ video{
 
   <div class="video-container">
     <video controls autoplay loop>
-      <source src="Test2.mp4" type="video/mp4">
+      <source class="video-container1" src="Test2.mp4" type="video/mp4">
+      <source class="video-container2" src="PORTRAIT.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     </div>
