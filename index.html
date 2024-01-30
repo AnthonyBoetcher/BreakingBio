@@ -7,6 +7,47 @@
   
   <style>
 
+    /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  #canna {
+      width: 10vw;
+      height: 50vh;
+      border: 3px solid red;
+      z-index:999;
+      position: relative; 
+      color: none;
+      margin: 0px 0 0 13.5vw;
+      border-radius: 60px;
+    }
+
+   #mush {
+      width: 15vw;
+      height: 25vh;
+      border: 3px solid red;
+      z-index:999;
+      position: relative; 
+      color: none;
+      margin: 25vh 0 0 55vw;
+      border-radius: 60px;
+    }
+
+     #water{
+      width: 12vw;
+      height: 80vh;
+      border: 3px solid red;
+      z-index:999;
+      position: relative; 
+      color: none;
+      margin: -55vh 0 0 28vw;
+      transform: rotate(-55deg);
+      border-radius: 70px;
+    }
+video{
+      src: url("PORTRAIT.mp4");
+    }    
+} 
+
+@media only screen and (min-width: 768px) {
     #canna {
       width: 10vw;
       height: 50vh;
@@ -40,6 +81,10 @@
       transform: rotate(-55deg);
       border-radius: 70px;
     }
+    video{
+    src: url("Test2.mp4");
+    }
+}
     
 #canna:hover {
     cursor: pointer;
