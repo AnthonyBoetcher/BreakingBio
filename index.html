@@ -8,7 +8,7 @@
   <style>
 
     /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 640px) {
   #canna {
       width: 10vw;
       height: 50vh;
@@ -47,45 +47,45 @@ display: block;
 }
 } 
 
-@media only screen and (min-width: 768px) {
-    #canna {
+@media only screen and (max-width: 640px) {
+  #canna {
       width: 10vw;
       height: 50vh;
       border: 3px solid red;
       z-index:999;
       position: relative; 
       color: none;
-      margin: 0px 0 0 13.5vw;
+      margin: 0px 0 0 0vw;
       border-radius: 60px;
     }
 
    #mush {
-      width: 15vw;
+      width: 25vw;
       height: 25vh;
       border: 3px solid red;
       z-index:999;
       position: relative; 
       color: none;
-      margin: 25vh 0 0 55vw;
+      margin: 22vh 0 0 60vw;
       border-radius: 60px;
     }
 
      #water{
-      width: 12vw;
+      width: 20vw;
       height: 80vh;
       border: 3px solid red;
       z-index:999;
       position: relative; 
       color: none;
-      margin: -55vh 0 0 28vw;
+      margin: -55vh 0 0 15vw;
       transform: rotate(-55deg);
       border-radius: 70px;
     }
-    .video-container1{
+.video-container2{
 display: block;    
 }
-
 }
+
     
 #canna:hover {
     cursor: pointer;
@@ -132,11 +132,9 @@ display: block;
   <div class="video-container">
     <video controls autoplay loop>
       <source class="video-container1" src="Test2.mp4" type="video/mp4">
-      <source class="video-container2" src="PORTRAIT.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     </div>
 
 </body>
 </html>
-
