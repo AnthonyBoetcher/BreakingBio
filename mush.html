@@ -4,36 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="hempFavicon.jpg">
-    <title>Hemp</title>
+    <link rel="icon" href="mushFavicon.jpg">
+    <title>Mycelium</title>
 </head>
+
+<button onclick="toggleRotation()">Pause/Resume Rotation</button>
 
 <div class="gallery">
     <span style="--i:1">
-      <img src="https://images4.alphacoders.com/678/thumb-1920-678317.jpg" alt="" />
+      <img src="1a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:2">
-      <img src="https://images5.alphacoders.com/653/653698.jpg" alt="" />
+      <img src="2a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:3">
-      <img src="https://images6.alphacoders.com/803/thumb-1920-803643.png" alt="" />
+      <img src="3a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:4">
-      <img src="https://images.alphacoders.com/785/thumb-1920-785833.png" alt="" />
+      <img src="4a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:5">
-      <img src="https://images6.alphacoders.com/749/thumb-1920-749966.png" alt="" />
+      <img src="26a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:6">
-      <img src="https://images4.alphacoders.com/761/thumb-1920-761076.png" alt="" />
+      <img src="5a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:7">
-      <img src="https://images.alphacoders.com/682/thumb-1920-682570.png" alt="" />
+      <img src="6a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
     <span style="--i:8">
-      <img src="https://images4.alphacoders.com/866/thumb-1920-866812.png" alt="" />
+      <img src="7a.jpg" alt="" onclick="zoomImage(this)" />
     </span>
+    <span style="--i:9">
+      <img src="8a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:10">
+      <img src="9a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:11">
+      <img src="10a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:12">
+      <img src="11a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:13">
+      <img src="12a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:14">
+      <img src="13a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:15">
+      <img src="14a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:16">
+      <img src="15a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:17">
+      <img src="16a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:18">
+      <img src="17a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:19">
+      <img src="18a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:20">
+      <img src="19a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:21">
+      <img src="20a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:22">
+      <img src="21a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:23">
+      <img src="22a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:24">
+      <img src="23a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:25">
+      <img src="24a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:26">
+      <img src="25a.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+ 
   </div>
+
+
 
 <style>
     body{
@@ -46,19 +105,19 @@
 
 .gallery{
   position:relative;
-  width:300px;
-  height:200px;
+  width: 400px;
+  height:300px;
   transform-style:preserve-3d;
   animation:rotate 35s linear infinite;
 }
 
 @keyframes rotate{
   from{
-    transform:perspective(1200px) rotateY(0deg);
+    transform:perspective(1800px) rotateY(0deg);
   }
   
   to{
-    transform:perspective(1200px) rotateY(360deg);
+    transform:perspective(1800px) rotateY(360deg);
   }
 }
 
@@ -68,15 +127,38 @@
   height:100%;
   transform-origin:center;
   transform-style:preserve-3d;
-  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+  transform:rotateY(calc(var(--i) * 13.85deg)) translateZ(1800px);
 }
 
-.gallery span img{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.gallery span img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+        cursor: pointer; /* Change cursor to pointer when hovering over images */
+    }
 </style>
+<script>
+  let rotationPaused = false;
+  const gallery = document.querySelector('.gallery');
+
+  function toggleRotation() {
+      rotationPaused = !rotationPaused;
+      if (rotationPaused) {
+          gallery.style.animationPlayState = 'paused';
+      } else {
+          gallery.style.animationPlayState = 'running';
+      }
+  }
+
+  function zoomImage(image) {
+      image.style.transform = 'scale(2)';
+  }
+
+  function unzoomImage(image) {
+      image.style.transform = 'scale(1)';
+  }
+</script>
 
   </html>
