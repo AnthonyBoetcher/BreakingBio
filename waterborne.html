@@ -35,9 +35,51 @@
     <span style="--i:8">
       <img src="8b.jpg" alt="" onclick="zoomImage(this)" />
     </span>
+
+    <span style="--i:9">
+      <img src="17b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:10">
+      <img src="18b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+
+    <span style="--i:11">
+      <img src="19b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:12">
+      <img src="20b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+
+    <span style="--i:13">
+      <img src="21b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:8">
+      <img src="22b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+
+    <span style="--i:14">
+      <img src="23b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:8">
+      <img src="24b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+
+    <span style="--i:15">
+      <img src="25b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:16">
+      <img src="26b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+
+    <span style="--i:17">
+      <img src="27b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
+    <span style="--i:18">
+      <img src="28b.jpg" alt="" onclick="zoomImage(this)" />
+    </span>
   </div>
 
-<style>
+  <style>
     body{
   margin:0;
   height:100vh;
@@ -56,11 +98,11 @@
 
 @keyframes rotate{
   from{
-    transform:perspective(1200px) rotateY(0deg);
+    transform:perspective(1800px) rotateY(0deg);
   }
   
   to{
-    transform:perspective(1200px) rotateY(360deg);
+    transform:perspective(1800px) rotateY(360deg);
   }
 }
 
@@ -70,28 +112,18 @@
   height:100%;
   transform-origin:center;
   transform-style:preserve-3d;
-  transform:rotateY(calc(var(--i) * 23deg)) translateZ(1200px);
+  transform:rotateY(calc(var(--i) * 13.85deg)) translateZ(1800px);
 }
 
 .gallery span img {
         position: absolute;
         width: 100%;
         height: 100%;
-        object-fit: cover; 
-        transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-        cursor: pointer; /* Change cursor to pointer when hovering over images */
-    }
-
-.gallery span video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
         transition: transform 0.3s ease; /* Smooth transition for zoom effect */
         cursor: pointer; /* Change cursor to pointer when hovering over images */
     }
 </style>
-
 <script>
   let rotationPaused = false;
   const gallery = document.querySelector('.gallery');
