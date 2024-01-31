@@ -101,19 +101,19 @@
 
 .gallery{
   position:relative;
-  width:300px;
-  height:200px;
+  width: 400px;
+  height:300px;
   transform-style:preserve-3d;
   animation:rotate 35s linear infinite;
 }
 
 @keyframes rotate{
   from{
-    transform:perspective(1200px) rotateY(0deg);
+    transform:perspective(1800px) rotateY(0deg);
   }
   
   to{
-    transform:perspective(1200px) rotateY(360deg);
+    transform:perspective(1800px) rotateY(360deg);
   }
 }
 
@@ -123,7 +123,7 @@
   height:100%;
   transform-origin:center;
   transform-style:preserve-3d;
-  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+  transform:rotateY(calc(var(--i) * 13.85deg)) translateZ(1800px);
 }
 
 .gallery span img{
