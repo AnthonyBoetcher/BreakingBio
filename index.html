@@ -8,11 +8,13 @@
   <style>
 
     /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 480px) {
   h1{
-    color: white;
+    color: transparent;
     z-index: 999;
+    position:absolute;
   }
+
   #canna {
       width: 10vw;
       height: 50vh;
@@ -52,7 +54,7 @@ display: block;
 } 
 
 @media only screen and (max-width: 480px) {
-  
+
   #canna {
       width: 10vw;
       height: 50vh;
@@ -60,7 +62,7 @@ display: block;
       z-index:999;
       position: relative; 
       color: none;
-      margin: 0px 0 0 0vw;
+      margin: -20vh 0 0 0vw;
       border-radius: 60px;
     }
 
@@ -71,7 +73,7 @@ display: block;
       z-index:999;
       position: relative; 
       color: none;
-      margin: 22vh 0 0 60vw;
+      margin: -42vh 0 0 60vw;
       border-radius: 60px;
     }
 
@@ -82,7 +84,7 @@ display: block;
       z-index:999;
       position: relative; 
       color: none;
-      margin: -55vh 0 0 15vw;
+      margin: -75vh 0 0 15vw;
       transform: rotate(-55deg);
       border-radius: 70px;
     }
